@@ -1,7 +1,7 @@
 # Configless Laravel Backup
 This package is an extension of [spatie/laravel-backup](https://github.com/spatie/laravel-backup). It adds a `ConfiglessBackup` command which is a clone of the normal `BackupCommand`. The new command adds a `--set-destination-disks` option. Using this option you can make backups to specific disks without having to publish the laravel-backup config file.
 
-I made this package because I prefer not publishing config files.
+I made this package because I had to publish a [202 line long config file](https://github.com/spatie/laravel-backup/blob/master/config/backup.php) in all my projects, eventhough i was only changing 1 line of it. Using this command I don't have to publish the config file at all.
 
 ## Install
 ```bash
@@ -16,10 +16,7 @@ $schedule->command('backup:run-configless --set-destination-disks=s3')->dailyAt(
 Thats it! You are now making backups to the disk you specified.
 
 ## Configuration
-The `ConfiglessBackup` command is a clone of the normal `BackupCommand`. You can view the documentation of that command in the [in Spatie's documentation](https://docs.spatie.be/laravel-backup/v5/taking-backups/overview#taking-backups)
-
-
-
+The `ConfiglessBackup` command is a clone of the normal `BackupCommand`. You can view the documentation of that command in the [in Spatie's documentation](https://docs.spatie.be/laravel-backup/v5/taking-backups/overview#taking-backups).
 
 ## License
 
