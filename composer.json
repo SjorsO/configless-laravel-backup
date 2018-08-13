@@ -1,0 +1,39 @@
+{
+    "name": "sjorso/configless-laravel-backup",
+    "description": "Use spatie/laravel-backup without publishing a config file",
+    "license": "MIT",
+    "homepage": "https://github.com/SjorsO/configless-laravel-backup",
+    "keywords": [
+        "configless"
+    ],
+    "authors": [
+        {
+            "name": "Sjors Ottjes",
+            "email": "sjorsottjes@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SjorsO\\ConfiglessLaravelBackup\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SjorsO\\ConfiglessLaravelBackup\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": "^7.0",
+        "spatie/laravel-backup": "^5.10"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SjorsO\\ConfiglessLaravelBackup\\Providers\\ConfiglessBackupProvider"
+            ]
+        }
+    }
+}
